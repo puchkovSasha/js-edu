@@ -1,5 +1,6 @@
 var { expect } = require('chai');
 
+const getTimeForEducation = require('./src/index');
 
 
 const defaultStudentSpeedConfig = {
@@ -26,70 +27,6 @@ const talentedStudentSpeedConfig = {
     top_peformance: 70
 };
 
-
-function getTimeForEducation(
-    focus, 
-    knowsProgramming,
-    config
-    ) {
-        if (config === defaultStudentSpeedConfig) {
-        
-                if (knowsProgramming === true) {
-    
-                    let score = 800;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                    
-                } else{
-                    
-                    let score = 1300;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                }
-            }
-        if (config === problemStudentSpeedConfig) {
-        
-                if (knowsProgramming === true) {
-    
-                    let score = 800;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                    
-                }  else{
-                    
-                    let score = 1300;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                }
-            }
-        if (config === talentedStudentSpeedConfig) {
-        
-                if (knowsProgramming === true) {
-    
-                    let score = 800;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                    
-                } 
-            }
-           
-        }
-
-        
-
-
-
-  const weeks = getTimeForEducation('family', true,  defaultStudentSpeedConfig);
   
 
 describe('js-edu', () => {
