@@ -11,29 +11,15 @@ module.exports = function getTimeForEducation(
     config = {family: 4}
     ) {
         
-        
-                if (knowsProgramming) {
-    
-                    let score = 800;
+         let amount = (knowsProgramming) ? Math.ceil(800 / config[focus]) : Math.ceil(1300 / config[focus]);
+
+            return amount;
             
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                    
-                } else{
-                    
-                    let score = 1300;
-            
-                    let amount = score / config[focus];
-            
-                    return Math.ceil(amount);
-                }
-            
-        
+       
         
             };
          
+       
         
             
-
   
